@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://8f4lh16bms6a"]
+
+[ext_resource type="Script" uid="uid://c7conoq66atyu" path="res://scenes/play.gd" id="1_11y2r"]
+[ext_resource type="Script" uid="uid://2j00h5d4u3fn" path="res://scenes/settings.gd" id="1_upctu"]
+[ext_resource type="Script" uid="uid://bghek8ouspxkf" path="res://scripts/exit.gd" id="1_xdvgc"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 337.0
+offset_right = 656.0
+offset_bottom = 367.0
+text = "Start"
+script = ExtResource("1_11y2r")
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 514.0
+offset_top = 377.0
+offset_right = 656.0
+offset_bottom = 408.0
+text = "Settings"
+script = ExtResource("1_upctu")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 514.0
+offset_top = 416.0
+offset_right = 656.0
+offset_bottom = 447.0
+text = "Exit"
+script = ExtResource("1_xdvgc")
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 223.0
+offset_right = 643.0
+offset_bottom = 263.0
+text = "Castle Journey"
+fit_content = true
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

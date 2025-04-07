@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ksdr6eamidy"]
+
+[ext_resource type="Script" uid="uid://c7g2y00sno6q6" path="res://scenes/Settings/back.gd" id="1_rbmmp"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 229.0
+offset_right = 686.0
+offset_bottom = 257.0
+text = "Settings"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 397.0
+offset_right = 618.0
+offset_bottom = 425.0
+text = "Back"
+script = ExtResource("1_rbmmp")
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

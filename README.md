@@ -16,16 +16,19 @@ The game focuses on storytelling, interactive learning, and immersive exploratio
 This project is developed using [Godot Engine](https://godotengine.org/).
 
 1. Download and install latest [Godot version](https://godotengine.org/download/)
-2. Clone this repository 
+2. Clone this repository
+
 ```bash
-git clone https://github.com/yourusername/castle-journey.git
+git clone https://github.com/marios-pz/castle-journey.git
 ```
+
 3. Open the project in Godot via "Import Project"
 4. Press "Play" to run the game
 
 ## Contributing
 
 Folder Structure:
+
 - `scenes/` — All game scenes and levels
 - `scripts/` — GDScript files
 - `assets/` — Sprites, sounds, and other media
@@ -35,9 +38,9 @@ Check [Project's Tab](https://github.com/marios-pz/castle-journey/projects?query
 
 ## Contributors
 
-Members of the team and other external contributors in the future will be added here: 
+Members of the team and other external contributors in the future will be added here:
 
-Programming - @xristoskrik 
+Programming - @xristoskrik
 Art - @tenmakenzou
 
 ## Acknowledgements

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8f4lh16bms6a"]
+[gd_scene load_steps=4 format=3 uid="uid://dluhcfvlv74cc"]
 
-[ext_resource type="Script" uid="uid://c7conoq66atyu" path="res://scenes/play.gd" id="1_11y2r"]
-[ext_resource type="Script" uid="uid://2j00h5d4u3fn" path="res://scenes/settings.gd" id="1_upctu"]
-[ext_resource type="Script" uid="uid://bghek8ouspxkf" path="res://scripts/exit.gd" id="1_xdvgc"]
+[ext_resource type="Script" uid="uid://c7conoq66atyu" path="res://scenes/play.gd" id="1_ngexw"]
+[ext_resource type="Script" uid="uid://2j00h5d4u3fn" path="res://scenes/settings.gd" id="2_4euyc"]
+[ext_resource type="Script" uid="uid://bghek8ouspxkf" path="res://scripts/exit.gd" id="3_rq53l"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,7 +19,7 @@ offset_top = 337.0
 offset_right = 656.0
 offset_bottom = 367.0
 text = "Start"
-script = ExtResource("1_11y2r")
+script = ExtResource("1_ngexw")
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
@@ -28,7 +28,7 @@ offset_top = 377.0
 offset_right = 656.0
 offset_bottom = 408.0
 text = "Settings"
-script = ExtResource("1_upctu")
+script = ExtResource("2_4euyc")
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
@@ -37,7 +37,7 @@ offset_top = 416.0
 offset_right = 656.0
 offset_bottom = 447.0
 text = "Exit"
-script = ExtResource("1_xdvgc")
+script = ExtResource("3_rq53l")
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0

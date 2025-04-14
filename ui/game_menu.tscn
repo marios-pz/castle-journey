@@ -1,15 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://c77i2ll2lmtra"]
+[gd_scene load_steps=4 format=3 uid="uid://c77i2ll2lmtra"]
 
-[ext_resource type="Script" uid="uid://wxub0fr7wi0y" path="res://scenes/continue.gd" id="1_ysvk1"]
-[ext_resource type="Script" uid="uid://c5otb0yxbr00b" path="res://scenes/settings_game_menu.gd" id="2_mw6r2"]
-[ext_resource type="Script" uid="uid://bghek8ouspxkf" path="res://scripts/exit.gd" id="3_ldg7d"]
-[ext_resource type="Script" uid="uid://b6wxr83kx3fhy" path="res://scenes/back.gd" id="3_mw6r2"]
+[sub_resource type="GDScript" id="GDScript_nbr25"]
+resource_name = "settings"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Settings.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_vthkq"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Menu.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_ysvk1"]
+resource_name = "exit"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -20,7 +40,6 @@ offset_top = 316.0
 offset_right = 656.0
 offset_bottom = 347.0
 text = "Continue"
-script = ExtResource("1_ysvk1")
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
@@ -29,7 +48,7 @@ offset_top = 351.0
 offset_right = 656.0
 offset_bottom = 382.0
 text = "Settings"
-script = ExtResource("2_mw6r2")
+script = SubResource("GDScript_nbr25")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -38,7 +57,7 @@ offset_top = 385.0
 offset_right = 656.0
 offset_bottom = 416.0
 text = "Back"
-script = ExtResource("3_mw6r2")
+script = SubResource("GDScript_vthkq")
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
@@ -47,7 +66,7 @@ offset_top = 420.0
 offset_right = 656.0
 offset_bottom = 451.0
 text = "Exit"
-script = ExtResource("3_ldg7d")
+script = SubResource("GDScript_ysvk1")
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0

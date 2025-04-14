@@ -1,8 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://8f4lh16bms6a"]
 
-[ext_resource type="Script" uid="uid://c7conoq66atyu" path="res://scenes/play.gd" id="1_11y2r"]
-[ext_resource type="Script" uid="uid://2j00h5d4u3fn" path="res://scenes/settings.gd" id="1_upctu"]
-[ext_resource type="Script" uid="uid://bghek8ouspxkf" path="res://scripts/exit.gd" id="1_xdvgc"]
+[sub_resource type="GDScript" id="GDScript_5wbsp"]
+resource_name = "play"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Levels/Level1.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_6ocf5"]
+resource_name = "Settings"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Settings.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_upctu"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,7 +38,7 @@ offset_top = 337.0
 offset_right = 656.0
 offset_bottom = 367.0
 text = "Start"
-script = ExtResource("1_11y2r")
+script = SubResource("GDScript_5wbsp")
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
@@ -28,7 +47,7 @@ offset_top = 377.0
 offset_right = 656.0
 offset_bottom = 408.0
 text = "Settings"
-script = ExtResource("1_upctu")
+script = SubResource("GDScript_6ocf5")
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
@@ -37,7 +56,7 @@ offset_top = 416.0
 offset_right = 656.0
 offset_bottom = 447.0
 text = "Exit"
-script = ExtResource("1_xdvgc")
+script = SubResource("GDScript_upctu")
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfn7x3t53g5f2"]
 
-[ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://scenes/game_menu.tscn" id="1_h2u8a"]
-[ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://scenes/game_menu.gd" id="2_e5spa"]
+[ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="1_h2u8a"]
+[ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_e5spa"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -14,8 +14,7 @@ grow_vertical = 2
 [node name="game_menu" parent="." instance=ExtResource("1_h2u8a")]
 visible = false
 layout_mode = 1
-offset_left = 585.244
-offset_top = 377.412
-offset_right = 585.244
-offset_bottom = 377.412
+offset_left = 1.0
+offset_right = 1.0
+offset_bottom = 7.0
 script = ExtResource("2_e5spa")

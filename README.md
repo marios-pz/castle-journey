@@ -41,6 +41,7 @@ Check [Project's Tab](https://github.com/marios-pz/castle-journey/projects?query
 Members of the team and other external contributors in the future will be added here:
 
 Programming - @xristoskrik
+
 Art - @tenmakenzou
 
 ## Acknowledgements

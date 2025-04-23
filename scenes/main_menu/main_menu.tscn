@@ -5,7 +5,7 @@ resource_name = "play"
 script/source = "extends Button
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/Levels/Level1.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/levels/level_1.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_6ocf5"]
@@ -13,7 +13,7 @@ resource_name = "Settings"
 script/source = "extends Button
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/Settings.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/settings.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_upctu"]

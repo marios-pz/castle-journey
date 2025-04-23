@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqa4j4gtvdr7e"]
+
+[ext_resource type="Script" uid="uid://cgeia6gxsklh2" path="res://scripts/player/player.gd" id="1_hmply"]
+
+[node name="Player" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hmply")

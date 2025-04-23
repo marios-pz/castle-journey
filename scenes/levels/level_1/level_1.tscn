@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfn7x3t53g5f2"]
+[gd_scene load_steps=4 format=3 uid="uid://bfn7x3t53g5f2"]
 
 [ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="1_6iamk"]
 [ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://cqa4j4gtvdr7e" path="res://scripts/player/player.tscn" id="3_5o1mp"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
@@ -18,3 +19,5 @@ offset_left = 1.0
 offset_right = 1.0
 offset_bottom = 7.0
 script = ExtResource("2_nsrm0")
+
+[node name="Player" parent="." instance=ExtResource("3_5o1mp")]

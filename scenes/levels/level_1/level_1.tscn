@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfn7x3t53g5f2"]
+[gd_scene load_steps=6 format=3 uid="uid://bfn7x3t53g5f2"]
 
 [ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="1_6iamk"]
 [ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://cqa4j4gtvdr7e" path="res://scripts/player/player.tscn" id="3_5o1mp"]
+[ext_resource type="Texture2D" uid="uid://cs7b7c7xvweb6" path="res://assets/ui/arrow.png" id="4_7uxs1"]
+[ext_resource type="Script" uid="uid://b2t5dwqb3u0s6" path="res://scenes/levels/level_1/next_scene.gd" id="5_7uxs1"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -190.0
+offset_right = -11.0
+offset_bottom = -190.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -21,3 +27,26 @@ offset_bottom = 7.0
 script = ExtResource("2_nsrm0")
 
 [node name="Player" parent="." instance=ExtResource("3_5o1mp")]
+
+[node name="next_scene" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 189.0
+offset_right = 143.0
+offset_bottom = 300.0
+rotation = 0.00730595
+texture_normal = ExtResource("4_7uxs1")
+script = ExtResource("5_7uxs1")
+
+[node name="next_scene2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 189.0
+offset_right = 143.0
+offset_bottom = 300.0
+rotation = 0.00730595
+texture_normal = ExtResource("4_7uxs1")
+script = ExtResource("5_7uxs1")
+
+[connection signal="pressed" from="next_scene" to="next_scene" method="_on_pressed"]
+[connection signal="pressed" from="next_scene2" to="next_scene2" method="_on_pressed"]

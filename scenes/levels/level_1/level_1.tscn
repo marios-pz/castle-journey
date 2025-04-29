@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://cqa4j4gtvdr7e" path="res://scripts/player/player.tscn" id="3_5o1mp"]
 [ext_resource type="Texture2D" uid="uid://cs7b7c7xvweb6" path="res://assets/ui/arrow.png" id="4_7uxs1"]
-[ext_resource type="Script" uid="uid://b2t5dwqb3u0s6" path="res://scenes/levels/level_1/next_scene.gd" id="5_7uxs1"]
+[ext_resource type="Script" path="res://scenes/levels/level_1/next_scene.gd" id="5_7uxs1"]
 
 [node name="Level1" type="Control"]
 layout_mode = 3

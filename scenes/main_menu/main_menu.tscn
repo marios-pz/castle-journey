@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://8f4lh16bms6a"]
+[gd_scene load_steps=5 format=3 uid="uid://8f4lh16bms6a"]
+
+[ext_resource type="Texture2D" uid="uid://cncy2fygcyeir" path="res://ui/main_menu_background.png" id="1_fsom3"]
 
 [sub_resource type="GDScript" id="GDScript_5wbsp"]
 resource_name = "play"
@@ -30,6 +32,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(575.625, 324.5)
+scale = Vector2(0.598307, 0.602778)
+texture = ExtResource("1_fsom3")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0

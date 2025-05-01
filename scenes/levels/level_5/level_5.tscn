@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvfhlequ1vt52"]
+
+[ext_resource type="Texture2D" uid="uid://ccgiywf2355fb" path="res://scenes/levels/level_5/5.png" id="1_wyyac"]
+
+[node name="Level5" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_wyyac")

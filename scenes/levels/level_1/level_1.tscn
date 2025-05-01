@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfn7x3t53g5f2"]
+[gd_scene load_steps=4 format=3 uid="uid://bfn7x3t53g5f2"]
 
-[ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="1_6iamk"]
-[ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_nsrm0"]
-[ext_resource type="PackedScene" uid="uid://cqa4j4gtvdr7e" path="res://scripts/player/player.tscn" id="3_5o1mp"]
+[ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_7uxs1"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="5_3lh42"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="6_vmhy7"]
 
@@ -17,16 +15,7 @@ offset_right = -11.0
 offset_bottom = -190.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="game_menu" parent="." instance=ExtResource("1_6iamk")]
-visible = false
-layout_mode = 1
-offset_left = 1.0
-offset_right = 1.0
-offset_bottom = 7.0
-script = ExtResource("2_nsrm0")
-
-[node name="Player" parent="." instance=ExtResource("3_5o1mp")]
+script = ExtResource("1_7uxs1")
 
 [node name="NavigationButton_1" type="TextureButton" parent="."]
 layout_mode = 0
@@ -43,4 +32,5 @@ position = Vector2(19.3668, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("6_vmhy7")
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="NavigationButton_1" to="NavigationButton_1" method="_on_pressed"]

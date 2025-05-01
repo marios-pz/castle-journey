@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3pg6cykahy6e"]
+
+[ext_resource type="Texture2D" uid="uid://b8n5hjmdfm1mm" path="res://scenes/cutscenes/cutscene_0/1.png" id="1_0y8ig"]
+
+[sub_resource type="GDScript" id="GDScript_0y8ig"]
+script/source = "extends Control
+
+
+func _on_ready() -> void:
+	var next_scene = load(\"res://scenes/cutscenes/cutscene_next.tscn\")
+	var next_scene_instance = next_scene.instantiate()
+	next_scene_instance.position = Vector2(350, 350)
+	next_scene_instance.z_index = 1
+	next_scene_instance.set_meta(\"scene\", \"level\")
+	next_scene_instance.set_meta(\"next_level\", 1)
+	add_child(next_scene_instance)
+"
+
+[node name="Cutscenes01" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_0y8ig")
+
+[node name="1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("1_0y8ig")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

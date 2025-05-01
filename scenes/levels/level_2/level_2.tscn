@@ -1,28 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd8wl4bsopyk"]
+[gd_scene load_steps=5 format=3 uid="uid://dd8wl4bsopyk"]
 
 [ext_resource type="Texture2D" uid="uid://dr1d6b4pv4smp" path="res://scenes/levels/level_2/2.png" id="1_68es0"]
-[ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="1_83l3i"]
-[ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_hopjm"]
-[ext_resource type="PackedScene" uid="uid://cqa4j4gtvdr7e" path="res://scripts/player/player.tscn" id="3_68es0"]
+[ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_e74df"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="5_68es0"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="5_e74df"]
 
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_e74df")
 
 [node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -1
 position = Vector2(960, 540)
 texture = ExtResource("1_68es0")
 
-[node name="game_menu" parent="." instance=ExtResource("1_83l3i")]
-visible = false
-offset_left = 1.0
-offset_right = 1.0
-offset_bottom = 7.0
-script = ExtResource("2_hopjm")
-
-[node name="Player" parent="." instance=ExtResource("3_68es0")]
-
-[node name="NavigationButton_4" type="TextureButton" parent="."]
+[node name="NavigationButton_3" type="TextureButton" parent="."]
 offset_left = 963.0
 offset_top = 579.0
 offset_right = 1003.0
@@ -31,9 +23,10 @@ scale = Vector2(2.2203, 2.13489)
 script = ExtResource("5_68es0")
 level_to_navigate = "3"
 
-[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_4"]
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
 position = Vector2(18.466, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("5_e74df")
 
-[connection signal="pressed" from="NavigationButton_4" to="NavigationButton_4" method="_on_pressed"]
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]

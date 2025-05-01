@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://nepkgd6oek4m"]
+
+[ext_resource type="Texture2D" uid="uid://c0xye8lgmbcm4" path="res://ui/cutscenes/cutscene_next_button.png" id="1_8rnny"]
+
+[sub_resource type="GDScript" id="GDScript_6imn4"]
+script/source = "extends Control
+
+
+
+func _on_texture_button_pressed() -> void:
+	print(\"next button is pressed\")
+	print(get_tree().get_meta(\"cutscene_number\"))
+"
+
+[sub_resource type="GDScript" id="GDScript_8rnny"]
+script/source = "extends TextureButton 
+
+func _on_pressed() -> void:
+	print(\"next button is pressed\")
+	print()
+	var next_level = get_parent().get_meta(\"next_level\")
+"
+
+[node name="CutsceneNext" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_6imn4")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_8rnny")
+script = SubResource("GDScript_8rnny")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="ready" from="TextureButton" to="." method="_on_ready"]

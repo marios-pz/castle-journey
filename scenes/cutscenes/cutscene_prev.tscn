@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjgaypv3x0oaf"]
+
+[ext_resource type="Texture2D" uid="uid://c3t6mlbcuggb4" path="res://ui/cutscenes/cutscene_prev_button.png" id="1_0u5pf"]
+
+[node name="CutscenePrev" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_0u5pf")

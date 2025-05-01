@@ -10,19 +10,19 @@ func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/levels/level_1/level_1.tscn\")
 "
 
+[sub_resource type="GDScript" id="GDScript_upctu"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
+
 [sub_resource type="GDScript" id="GDScript_6ocf5"]
 resource_name = "Settings"
 script/source = "extends Button
 
 func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/settings.tscn\")
-"
-
-[sub_resource type="GDScript" id="GDScript_upctu"]
-script/source = "extends Button
-
-func _on_pressed() -> void:
-	get_tree().quit()
 "
 
 [node name="Menu" type="Control"]
@@ -34,46 +34,85 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(575.625, 324.5)
-scale = Vector2(0.598307, 0.602778)
+position = Vector2(960, 540)
 texture = ExtResource("1_fsom3")
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 0
-offset_left = 514.0
-offset_top = 337.0
-offset_right = 656.0
-offset_bottom = 367.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.257
+anchor_top = 0.205
+anchor_right = 0.355
+anchor_bottom = 0.426
+offset_left = 476.56
+offset_top = 240.6
+offset_right = 328.4
+offset_bottom = 41.92
+scale = Vector2(1.00123, 0.97102)
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -15.5
+offset_right = 71.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Start"
 script = SubResource("GDScript_5wbsp")
 
-[node name="Settings" type="Button" parent="."]
-layout_mode = 0
-offset_left = 514.0
-offset_top = 377.0
-offset_right = 656.0
-offset_bottom = 408.0
-text = "Settings"
-script = SubResource("GDScript_6ocf5")
-
-[node name="Exit" type="Button" parent="."]
-layout_mode = 0
-offset_left = 514.0
-offset_top = 416.0
-offset_right = 656.0
-offset_bottom = 447.0
+[node name="Exit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 69.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Exit"
 script = SubResource("GDScript_upctu")
 
-[node name="Title" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 526.0
-offset_top = 223.0
-offset_right = 643.0
-offset_bottom = 263.0
+[node name="Title" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -64.0
+offset_right = 57.5
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Castle Journey"
 fit_content = true
 
-[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
-[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
-[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
+[node name="Settings" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = 24.5
+offset_right = 71.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+script = SubResource("GDScript_6ocf5")
+
+[connection signal="pressed" from="Control/Play" to="Control/Play" method="_on_pressed"]
+[connection signal="pressed" from="Control/Exit" to="Control/Exit" method="_on_pressed"]
+[connection signal="pressed" from="Control/Settings" to="Control/Settings" method="_on_pressed"]

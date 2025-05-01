@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8qabe6mm7ltm"]
+
+[ext_resource type="Texture2D" uid="uid://deprumcyptboi" path="res://scenes/levels/level_4/4.png" id="1_bvs1t"]
+[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_l583c"]
+[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_o2n0b"]
+
+[node name="Level4" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_bvs1t")
+
+[node name="NavigationButton_3" type="TextureButton" parent="."]
+offset_left = 891.0
+offset_top = 305.0
+offset_right = 931.0
+offset_bottom = 345.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("2_l583c")
+level_to_navigate = "3"
+
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
+position = Vector2(18.466, 19.6732)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("3_o2n0b")
+
+[node name="NavigationButton_5" type="TextureButton" parent="."]
+offset_left = 891.0
+offset_top = 305.0
+offset_right = 931.0
+offset_bottom = 345.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("2_l583c")
+level_to_navigate = "5"
+
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_5"]
+position = Vector2(18.466, 19.6732)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("3_o2n0b")
+
+[connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]
+[connection signal="pressed" from="NavigationButton_5" to="NavigationButton_5" method="_on_pressed"]

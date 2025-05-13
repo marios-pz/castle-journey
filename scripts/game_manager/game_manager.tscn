@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://eu5jxkp840x0"]
+
+[ext_resource type="Script" uid="uid://kubbx4vsv8w2" path="res://scripts/game_manager/game_manager.gd" id="1_aquld"]
+
+[node name="GameManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aquld")
+
+[node name="UiPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 117.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UiPanel"]
+modulate = Color(0.949243, 0.896787, 1.54018e-06, 1)
+layout_mode = 0
+offset_right = 113.0
+offset_bottom = 76.0
+text = "GOLD: "
+
+[node name="QuestPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 113.0
+offset_right = 279.0
+offset_bottom = 258.0
+
+[node name="QuestTitle" type="RichTextLabel" parent="QuestPanel"]
+modulate = Color(0.962993, 0.760734, 0.753648, 1)
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 144.0
+offset_bottom = 31.0
+text = "QuestTitle"
+
+[node name="QuestDescription" type="RichTextLabel" parent="QuestPanel"]
+modulate = Color(0.895877, 0.899347, 0.990865, 1)
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 168.0
+offset_bottom = 66.0
+text = "QuestDescription"

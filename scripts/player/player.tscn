@@ -15,27 +15,3 @@ script = ExtResource("1_hmply")
 inventory = ExtResource("2_enrq2")
 
 [node name="Inventory" parent="." instance=ExtResource("3_so2s4")]
-offset_left = 960.0
-offset_top = 540.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="ReturnBackButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 992.0
-offset_right = 89.0
-offset_bottom = 1056.0
-texture_normal = ExtResource("4_dolh7")
-stretch_mode = 3
-script = ExtResource("5_1fo2x")
-
-[node name="game_menu" parent="." instance=ExtResource("6_jft68")]
-visible = false
-layout_mode = 1
-offset_left = 1.0
-offset_right = 1.0
-offset_bottom = 7.0
-script = ExtResource("7_5amry")
-
-[connection signal="pressed" from="ReturnBackButton" to="ReturnBackButton" method="_on_pressed"]

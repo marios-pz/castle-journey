@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dg2dx8oxxw53p"]
+
+[node name="InventorySlot" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.12, 1.16)
+color = Color(0.556953, 0.556953, 0.556953, 1)

@@ -1,13 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://e6xopr3y6ncm"]
+[gd_scene load_steps=4 format=3 uid="uid://e6xopr3y6ncm"]
 
-[ext_resource type="Script" uid="uid://cqyj6yy3j8sa7" path="res://scripts/player/inventory/inventory_ui.gd" id="1_v68m8"]
+[ext_resource type="PackedScene" uid="uid://dg2dx8oxxw53p" path="res://scripts/player/inventory/inventory_slot.tscn" id="2_pjs63"]
+
+[sub_resource type="GDScript" id="GDScript_ja8xo"]
+script/source = "extends Control
+
+var is_open = false
+@export var inventory_slot : PackedScene
+@onready var grid_container = $GridContainer
+
+var rows = 5 
+var columns = 5
+
+func _ready() -> void:
+	for i in range(rows * columns):
+		var slot = inventory_slot.instantiate()
+		grid_container.add_child(slot)
+	close()
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed(\"inventory\"):
+		if is_open:
+			close()
+		else:
+			open()
+			
+func open():
+	visible = true
+	is_open = true
+
+func close():
+	visible = false
+	is_open = false
+"
+
+[sub_resource type="SystemFont" id="SystemFont_v68m8"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_v68m8")
+script = SubResource("GDScript_ja8xo")
+inventory_slot = ExtResource("2_pjs63")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="GridContainer" type="GridContainer" parent="."]
+clip_contents = true
+layout_direction = 2
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 399.0
+offset_top = 254.0
+offset_right = 431.0
+offset_bottom = 286.0
+pivot_offset = Vector2(5, 0)
+columns = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 21.0
+offset_right = 722.0
+offset_bottom = 200.0
+theme_override_fonts/font = SubResource("SystemFont_v68m8")
+theme_override_font_sizes/font_size = 47
+text = "Inventory
+"
+horizontal_alignment = 1

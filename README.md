@@ -48,7 +48,7 @@ Art - @tenmakenzou
 
 - University of West Attica, Department of Computer Engineering
 - Professors: Foivos Mylonas, Christos Troussas
-- Inspiration: Rusty Lake, Fran Bow, Sally Face, Your Turn To Die
+- Inspiration: Rusty Lake, Fran Bow, Sally Face, Your Turn To Die, Daymare Town
 
 ## License
 

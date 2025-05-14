@@ -1,8 +1,9 @@
 class_name QuestManager extends Node2D
 
-@onready var QuestPanel: Panel = GameManager.get_node('QuestPanel')
-@onready var QuestTitle: Panel = GameManager.get_node('QuestPanel').get_node("QuestTitle")
-@onready var QuestDescription: Panel = GameManager.get_node('QuestPanel').get_node('QuestDescription')
+@onready var QuestPanel: Panel = GameManager.get_node("QuestPanel")
+@onready var QuestTitle: RichTextLabel = QuestPanel.get_node("QuestTitle")
+@onready var QuestDescription: RichTextLabel = QuestPanel.get_node("QuestDescription")
+
 
 
 @export_group("Guest Settings")

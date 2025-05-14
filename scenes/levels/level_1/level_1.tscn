@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfn7x3t53g5f2"]
+[gd_scene load_steps=6 format=3 uid="uid://bfn7x3t53g5f2"]
 
 [ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_7uxs1"]
+[ext_resource type="Script" uid="uid://drxs4twqrtayi" path="res://scenes/levels/level_1/npc_test_quest.gd" id="4_spwf2"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="5_3lh42"]
+[ext_resource type="Script" uid="uid://du534gbb2skf0" path="res://scripts/quest_manager/quest.gd" id="5_7uxs1"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="6_vmhy7"]
 
 [node name="Level1" type="Control"]
@@ -32,5 +34,29 @@ position = Vector2(19.3668, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("6_vmhy7")
 
+[node name="TestNpc" type="TextureButton" parent="." node_paths=PackedStringArray("quest")]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 745.0
+offset_right = 393.0
+offset_bottom = 785.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("4_spwf2")
+quest = NodePath("TestQuest")
+
+[node name="TestNpcButton" type="Sprite2D" parent="TestNpc"]
+position = Vector2(19.3667, 16.8627)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("6_vmhy7")
+
+[node name="TestQuest" type="Node2D" parent="TestNpc"]
+script = ExtResource("5_7uxs1")
+quest_name = "Collect Something"
+quest_description = "Collect 3  something"
+reach_goal_text = "you finished!!"
+reward_amount = 323
+metadata/_custom_type_script = "uid://du534gbb2skf0"
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="NavigationButton_1" to="NavigationButton_1" method="_on_pressed"]
+[connection signal="pressed" from="TestNpc" to="TestNpc" method="_on_pressed"]

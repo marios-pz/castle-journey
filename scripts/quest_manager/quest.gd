@@ -18,3 +18,9 @@ func reached_goal() -> void:
 		quest_status = QuestStatus.reached_goal
 		#update ui
 		QuestDescription.text = reach_goal_text
+
+func finish_quest() -> void:
+	if quest_status == QuestStatus.reached_goal:
+		quest_status = QuestStatus.finished
+		QuestPanel.visible = false
+		GameManager.gold += reward_amount

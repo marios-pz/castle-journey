@@ -1,10 +1,19 @@
 extends Control
 
+
+@onready var inv: Inv = preload("res://assets/player/inventory/items/inventory.tres")
+@onready var slots: Array = $GridContainer.get_children()
+
 var is_open = false
-@export var inventory_slot : PackedScene
-@onready var grid_container = $GridContainer
+
+func update_slots():
+	for i in range(min(inv.slots.size(), slots.size())):
+		slots[i].update(inv.slots[i])
+
 
 func _ready() -> void:
+	inv.update.connect(update_slots)
+	update_slots()
 	close()
 	
 	

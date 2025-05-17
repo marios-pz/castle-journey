@@ -1,66 +1,97 @@
 [gd_scene load_steps=4 format=3 uid="uid://e6xopr3y6ncm"]
 
-[ext_resource type="PackedScene" uid="uid://dg2dx8oxxw53p" path="res://scripts/player/inventory/inventory_slot.tscn" id="2_pjs63"]
-
-[sub_resource type="GDScript" id="GDScript_ja8xo"]
-script/source = "extends Control
-
-var is_open = false
-@export var inventory_slot : PackedScene
-@onready var grid_container = $GridContainer
-
-var rows = 5 
-var columns = 5
-
-func _ready() -> void:
-	for i in range(rows * columns):
-		var slot = inventory_slot.instantiate()
-		grid_container.add_child(slot)
-	close()
-	
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed(\"inventory\"):
-		if is_open:
-			close()
-		else:
-			open()
-			
-func open():
-	visible = true
-	is_open = true
-
-func close():
-	visible = false
-	is_open = false
-"
-
-[sub_resource type="SystemFont" id="SystemFont_v68m8"]
+[ext_resource type="Script" uid="uid://cqyj6yy3j8sa7" path="res://scripts/player/inventory/inventory_ui.gd" id="1_45f7y"]
+[ext_resource type="Texture2D" uid="uid://d2ux5dr464ihq" path="res://ui/inventory/inventory_background.png" id="1_v68m8"]
+[ext_resource type="PackedScene" uid="uid://tn8pea20bper" path="res://scripts/player/inventory/inventory_slot.tscn" id="2_pjs63"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = SubResource("GDScript_ja8xo")
-inventory_slot = ExtResource("2_pjs63")
+script = ExtResource("1_45f7y")
+
+[node name="InventoryBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_v68m8")
+centered = false
 
 [node name="GridContainer" type="GridContainer" parent="."]
 clip_contents = true
 layout_direction = 2
 layout_mode = 0
-offset_left = 399.0
-offset_top = 254.0
-offset_right = 431.0
-offset_bottom = 286.0
-pivot_offset = Vector2(5, 0)
-columns = 5
+offset_left = 581.0
+offset_top = 346.0
+offset_right = 985.0
+offset_bottom = 614.0
+scale = Vector2(1.77747, 1.80361)
+columns = 6
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 21.0
-offset_right = 722.0
-offset_bottom = 200.0
-theme_override_fonts/font = SubResource("SystemFont_v68m8")
-theme_override_font_sizes/font_size = 47
-text = "Inventory
-"
-horizontal_alignment = 1
+[node name="InventorySlot" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="GridContainer" instance=ExtResource("2_pjs63")]
+layout_mode = 2

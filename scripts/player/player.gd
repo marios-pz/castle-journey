@@ -1,7 +1,6 @@
 extends Control
 
-
-@export var inventory: Inv
+@onready var inventory = $Inventory
 
 @onready var item: InvItem = preload("res://assets/player/inventory/items/stick.tres")
 

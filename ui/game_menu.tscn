@@ -25,55 +25,58 @@ func _on_pressed() -> void:
 
 [node name="Menu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.139
+anchor_top = 0.149
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
+offset_left = -267.88
+offset_top = -166.92
+offset_right = -1771.0
+offset_bottom = -906.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Continue" type="Button" parent="."]
 layout_mode = 0
-offset_left = 514.0
-offset_top = 316.0
-offset_right = 656.0
-offset_bottom = 347.0
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 146.0
+offset_bottom = 72.0
 text = "Continue"
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
-offset_left = 514.0
-offset_top = 351.0
-offset_right = 656.0
-offset_bottom = 382.0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 146.0
+offset_bottom = 106.0
 text = "Settings"
 script = SubResource("GDScript_nbr25")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 515.0
-offset_top = 385.0
-offset_right = 656.0
-offset_bottom = 416.0
+offset_left = 4.0
+offset_top = 109.0
+offset_right = 145.0
+offset_bottom = 140.0
 text = "Back"
 script = SubResource("GDScript_vthkq")
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 514.0
-offset_top = 420.0
-offset_right = 656.0
-offset_bottom = 451.0
+offset_left = 4.0
+offset_top = 144.0
+offset_right = 146.0
+offset_bottom = 175.0
 text = "Exit"
 script = SubResource("GDScript_ysvk1")
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 526.0
-offset_top = 223.0
-offset_right = 643.0
-offset_bottom = 263.0
+offset_left = 15.0
+offset_top = 2.0
+offset_right = 132.0
+offset_bottom = 42.0
 text = "Castle Journey"
 fit_content = true
 

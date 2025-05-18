@@ -1,7 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqa4j4gtvdr7e"]
 
 [ext_resource type="Script" uid="uid://cgeia6gxsklh2" path="res://scripts/player/player.gd" id="1_hmply"]
-[ext_resource type="Resource" uid="uid://4i358sip4837" path="res://assets/player/inventory/items/inventory.tres" id="2_enrq2"]
 [ext_resource type="PackedScene" uid="uid://e6xopr3y6ncm" path="res://scripts/player/inventory/Inventory.tscn" id="3_so2s4"]
 [ext_resource type="Texture2D" uid="uid://cnnn1h4ric6lq" path="res://assets/ui/return_back_button.png" id="4_dolh7"]
 [ext_resource type="Script" uid="uid://bu1pcoha2hdaf" path="res://scripts/player/return_back_button.gd" id="5_1fo2x"]
@@ -10,13 +9,8 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_hmply")
-inventory = ExtResource("2_enrq2")
 
 [node name="Inventory" parent="." instance=ExtResource("3_so2s4")]
-offset_left = 960.0
-offset_top = 540.0
-offset_right = 1920.0
-offset_bottom = 1080.0
 
 [node name="ReturnBackButton" type="TextureButton" parent="."]
 layout_mode = 0

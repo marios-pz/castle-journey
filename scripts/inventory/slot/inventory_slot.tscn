@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://tn8pea20bper"]
 
-[ext_resource type="Script" uid="uid://4voxonmv4ww1" path="res://scripts/player/inventory/inventory_slot.gd" id="1_l4pmv"]
-[ext_resource type="Texture2D" uid="uid://ewyjo8frbf1e" path="res://ui/inventory/inventory_slot.png" id="1_or6fr"]
+[ext_resource type="Script" uid="uid://4voxonmv4ww1" path="res://scripts/inventory/slot/inventory_slot.gd" id="1_wvgqc"]
+[ext_resource type="Texture2D" uid="uid://ewyjo8frbf1e" path="res://ui/inventory/inventory_slot.png" id="2_natq7"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l4pmv"]
 light_mode = 2
@@ -13,7 +13,7 @@ custom_minimum_size = Vector2(64, 64)
 offset_right = 64.0
 offset_bottom = 64.0
 scale = Vector2(1.00223, 1)
-script = ExtResource("1_l4pmv")
+script = ExtResource("1_wvgqc")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(64, 64)
@@ -29,5 +29,5 @@ position = Vector2(-32, -32)
 centered = false
 
 [node name="InventorySlot" type="Sprite2D" parent="."]
-texture = ExtResource("1_or6fr")
+texture = ExtResource("2_natq7")
 centered = false

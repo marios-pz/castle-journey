@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bx3h51spfx5k8"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bx3h51spfx5k8"]
 
-[ext_resource type="Script" uid="uid://8gv38or8hpi6" path="res://scripts/player/inventory/inventory_item.gd" id="1_3f5nx"]
-[ext_resource type="Texture2D" uid="uid://d110rhancjear" path="res://assets/player/inventory/items/stick.jpg" id="2_hwx87"]
+[ext_resource type="Script" uid="uid://ca0cnrctber4s" path="res://scripts/items/item.gd" id="1_3f5nx"]
+[ext_resource type="Texture2D" uid="uid://cnuk3spuu3i10" path="res://assets/player/inventory/items/stick.png" id="2_3f5nx"]
 
 [resource]
 script = ExtResource("1_3f5nx")
-name = "stick"
-texture = ExtResource("2_hwx87")
-metadata/_custom_type_script = "uid://8gv38or8hpi6"
+name = "Stick"
+texture = ExtResource("2_3f5nx")

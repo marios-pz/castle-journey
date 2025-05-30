@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://eu5jxkp840x0"]
+[gd_scene load_steps=4 format=3 uid="uid://eu5jxkp840x0"]
 
 [ext_resource type="Script" uid="uid://kubbx4vsv8w2" path="res://scripts/game_manager/game_manager.gd" id="1_aquld"]
-[ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="2_qrmp8"]
 [ext_resource type="PackedScene" uid="uid://c77i2ll2lmtra" path="res://ui/game_menu.tscn" id="3_w7alj"]
 [ext_resource type="PackedScene" uid="uid://e6xopr3y6ncm" path="res://scripts/inventory/Inventory.tscn" id="4_3kdp0"]
 
@@ -46,6 +45,9 @@ text = "QuestDescription"
 
 [node name="Menu" parent="." instance=ExtResource("3_w7alj")]
 visible = false
+light_mask = 2
+visibility_layer = 2
+z_index = 2
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -55,9 +57,9 @@ offset_left = -111.0
 offset_top = -94.0
 offset_right = 111.0
 offset_bottom = 94.0
-script = ExtResource("2_qrmp8")
 
 [node name="Inventory" parent="." instance=ExtResource("4_3kdp0")]
+visible = false
 offset_left = 20.0
 offset_top = -1.0
 offset_right = 20.0

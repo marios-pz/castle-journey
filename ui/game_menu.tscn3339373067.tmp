@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c77i2ll2lmtra"]
+[gd_scene load_steps=6 format=3 uid="uid://c77i2ll2lmtra"]
 
 [ext_resource type="Script" uid="uid://8hq2dbg3no6e" path="res://ui/continue.gd" id="1_3ptas"]
 [ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="1_5b8aq"]
 [ext_resource type="Script" uid="uid://wy8d5sjbj246" path="res://ui/back.gd" id="2_vthkq"]
-[ext_resource type="Texture2D" uid="uid://c37l6gpy7jde2" path="res://ui/background/background.png" id="4_7t6nk"]
 
 [sub_resource type="GDScript" id="GDScript_nbr25"]
 resource_name = "settings"
@@ -25,7 +24,6 @@ func _on_pressed() -> void:
 "
 
 [node name="Menu" type="Control"]
-z_index = 1
 layout_mode = 3
 anchor_left = 0.139
 anchor_top = 0.149
@@ -40,7 +38,6 @@ grow_vertical = 2
 script = ExtResource("1_5b8aq")
 
 [node name="Control" type="Control" parent="."]
-z_index = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -48,7 +45,7 @@ offset_bottom = 40.0
 [node name="Title" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 9.0
+offset_top = 2.0
 offset_right = 132.0
 offset_bottom = 42.0
 text = "Castle Journey"
@@ -83,7 +80,6 @@ script = SubResource("GDScript_ysvk1")
 
 [node name="Settings" type="Control" parent="."]
 visible = false
-z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -91,8 +87,8 @@ offset_bottom = 40.0
 
 [node name="Title" type="RichTextLabel" parent="Settings"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 8.0
+offset_left = 15.0
+offset_top = 2.0
 offset_right = 132.0
 offset_bottom = 42.0
 text = "Settings
@@ -107,11 +103,6 @@ offset_right = 146.0
 offset_bottom = 106.0
 text = "Back"
 script = ExtResource("2_vthkq")
-
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(548.66, 412)
-scale = Vector2(1.60078, 1.61759)
-texture = ExtResource("4_7t6nk")
 
 [connection signal="pressed" from="Control/Continue" to="Control/Continue" method="_on_pressed"]
 [connection signal="pressed" from="Control/Settings" to="Control/Settings" method="_on_pressed"]

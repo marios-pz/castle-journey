@@ -34,6 +34,21 @@ position = Vector2(19.3668, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("6_vmhy7")
 
+[node name="NavigationButton_Shop" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 636.0
+offset_right = 856.0
+offset_bottom = 676.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("5_3lh42")
+level_to_navigate = "item_shop"
+
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_Shop"]
+position = Vector2(229.699, 18.7363)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("6_vmhy7")
+
 [node name="TestNpc" type="TextureButton" parent="." node_paths=PackedStringArray("quest")]
 layout_mode = 0
 offset_left = 353.0
@@ -59,4 +74,5 @@ metadata/_custom_type_script = "uid://du534gbb2skf0"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="NavigationButton_1" to="NavigationButton_1" method="_on_pressed"]
+[connection signal="pressed" from="NavigationButton_Shop" to="NavigationButton_Shop" method="_on_pressed"]
 [connection signal="pressed" from="TestNpc" to="TestNpc" method="_on_pressed"]

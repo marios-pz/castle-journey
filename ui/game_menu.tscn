@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c77i2ll2lmtra"]
+[gd_scene load_steps=8 format=3 uid="uid://c77i2ll2lmtra"]
 
 [ext_resource type="Script" uid="uid://8hq2dbg3no6e" path="res://ui/continue.gd" id="1_3ptas"]
 [ext_resource type="Script" uid="uid://dotfiriry4g67" path="res://ui/game_menu.gd" id="1_5b8aq"]
@@ -22,6 +22,14 @@ script/source = "extends Button
 
 func _on_pressed() -> void:
 	get_tree().quit()
+"
+
+[sub_resource type="GDScript" id="GDScript_wiki"]
+resource_name = "wiki"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	OS.shell_open(\"file://\" + ProjectSettings.globalize_path(\"res://wiki/index.html\"))
 "
 
 [node name="Menu" type="Control"]
@@ -72,12 +80,21 @@ offset_bottom = 106.0
 text = "Settings"
 script = SubResource("GDScript_nbr25")
 
-[node name="Exit" type="Button" parent="Control"]
+[node name="Wiki" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 110.0
 offset_right = 146.0
 offset_bottom = 141.0
+text = "Wiki"
+script = SubResource("GDScript_wiki")
+
+[node name="Exit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 145.0
+offset_right = 146.0
+offset_bottom = 176.0
 text = "Exit"
 script = SubResource("GDScript_ysvk1")
 
@@ -115,5 +132,6 @@ texture = ExtResource("4_7t6nk")
 
 [connection signal="pressed" from="Control/Continue" to="Control/Continue" method="_on_pressed"]
 [connection signal="pressed" from="Control/Settings" to="Control/Settings" method="_on_pressed"]
+[connection signal="pressed" from="Control/Wiki" to="Control/Wiki" method="_on_pressed"]
 [connection signal="pressed" from="Control/Exit" to="Control/Exit" method="_on_pressed"]
 [connection signal="pressed" from="Settings/back" to="Settings/back" method="_on_pressed"]

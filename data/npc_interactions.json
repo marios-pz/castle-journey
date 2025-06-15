@@ -1,0 +1,14 @@
+{
+	"gate_guard_a": [
+		"Halt! Who goes there?",
+		"I haven't seen you around these parts before...",
+		"Unless you have a proper pass, I cannot let you through.",
+		"Perhaps you should speak with my colleague over there. He might be more... accommodating."
+	],
+	"gate_guard_b": [
+		"Ah, a new face! Welcome to our humble city.",
+		"Don't mind my partner, he's always been a bit... strict.",
+		"I might be able to help you get that pass you need.",
+		"Just bring me three city tokens, and I'll see what I can do."
+	]
+} 

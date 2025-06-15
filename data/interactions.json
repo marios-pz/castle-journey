@@ -1,0 +1,27 @@
+{
+	"level_1": [
+		"Welcome to the first level!",
+		"This is where your adventure begins.",
+		"Explore the world and complete quests!"
+	],
+	"level_2": [
+		"You've reached level 2!",
+		"Things are getting more interesting now.",
+		"Keep going, adventurer!"
+	],
+	"level_3": [
+		"You've reached level 3!",
+		"Things are getting more interesting now.",
+		"Keep going, adventurer!"
+	],
+	"level_4": [
+		"You've reached level 4!",
+		"Things are getting more interesting now.",
+		"Keep going, adventurer!"
+	],
+	"level_item_shop": [
+		"Welcome to the Item Shop!",
+		"Here you can buy items with your gold.",
+		"Click on an item once to select it, then again to purchase."
+	]
+} 

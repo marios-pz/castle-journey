@@ -6,6 +6,26 @@ var current_index: int = 0
 func _ready() -> void:
 	visible = false
 
+func show_texts(level_id: String) -> void:
+	var json = JSON.new()
+	var file = FileAccess.open("res://data/interactions.json", FileAccess.READ)
+	if file:
+		var json_text = file.get_as_text()
+		var error = json.parse(json_text)
+		if error == OK:
+			var data = json.get_data()
+			if data.has(level_id):
+				current_texts = data[level_id]
+				current_index = 0
+				visible = true
+				_update_text()
+			else:
+				visible = false
+		else:
+			print("JSON Parse Error: ", json.get_error_message())
+	else:
+		print("Failed to open interactions.json")
+
 func show_npc_text(npc_id: String) -> void:
 	var json = JSON.new()
 	var file = FileAccess.open("res://data/npc_interactions.json", FileAccess.READ)

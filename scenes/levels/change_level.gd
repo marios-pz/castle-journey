@@ -1,7 +1,6 @@
 extends Node
 
-
-func _on_ready() -> void:
+func _ready() -> void:
 	var game_manager = get_node("/root/GameManager")
 	if game_manager:
 		var level_name = "level_" + name.to_lower().replace("level", "")

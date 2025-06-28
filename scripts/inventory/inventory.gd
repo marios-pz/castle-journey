@@ -15,23 +15,27 @@ func _ready() -> void:
 	close()
 
 func update_slots():
-	var grid = grid.get_children()
+	var grid_children = grid.get_children()
 	var inv_size = inventory.size()
-	for i in range(min(inv_size, grid.size())):
-		grid[i].update(inventory[i])	
+	for i in range(min(inv_size, grid_children.size())):
+		grid_children[i].update(inventory[i])	
 
 func add_item_resource(item: Item) -> void:
-	inventory.append(item)
-	update_slots()
+	if item:
+		inventory.append(item)
+		update_slots()
 	
 
 func remove_item_resource(item: Item) -> void:
-	for i in grid.get_child_count():
-		var child = grid.get_child(i)
-		if child.get_item() == item:
-			child.unset_item()
-			inventory.remove_at(i)
-			break
+	if item:
+		var index = inventory.find(item)
+		if index != -1:
+			inventory.remove_at(index)
+			# Update the corresponding slot
+			var grid_children = grid.get_children()
+			if index < grid_children.size():
+				grid_children[index].unset_item()
+			update_slots()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("inventory"):

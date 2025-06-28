@@ -29,19 +29,25 @@ func update_slots():
 	var grid_slots = grid.get_children()
 	var shop_size = shop_items.size()
 	for i in range(min(shop_size, grid_slots.size())):
-		grid_slots[i].texture = shop_items[i].texture
+		grid_slots[i].texture_normal = shop_items[i].texture
 
 func _on_slot_pressed(slot_index: int) -> void:
+	if slot_index >= shop_items.size():
+		return
+		
 	if selected_slot == slot_index:
 		# Second click - try to purchase
 		var item = shop_items[slot_index]
 		var game_manager = get_node("/root/GameManager")
-		if game_manager.gold >= item.price:
+		if game_manager and game_manager.gold >= item.price:
 			game_manager.gold -= item.price
 			game_manager.add_item(item)
 			# Remove item from shop
 			shop_items.remove_at(slot_index)
-			grid.get_child(slot_index).queue_free()
+			# Remove the slot from grid
+			var slot_to_remove = grid.get_child(slot_index)
+			if slot_to_remove:
+				slot_to_remove.queue_free()
 		selected_slot = -1
 	else:
 		# First click - select slot

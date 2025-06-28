@@ -52,6 +52,6 @@ texture = ExtResource("3_o2n0b")
 [node name="ItemShop" parent="." instance=ExtResource("4_l583c")]
 layout_mode = 1
 
-[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="." to="." method="_ready"]
 [connection signal="pressed" from="ShopButton" to="ShopButton" method="_on_pressed"]
 [connection signal="pressed" from="NavigationButton_1" to="NavigationButton_1" method="_on_pressed"]

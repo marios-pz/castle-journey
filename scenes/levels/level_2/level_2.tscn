@@ -28,5 +28,5 @@ position = Vector2(18.466, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("5_e74df")
 
-[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="." to="." method="_ready"]
 [connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]

@@ -20,16 +20,15 @@ centered = false
 
 [node name="NavigationButton_1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 716.0
-offset_top = 636.0
-offset_right = 756.0
-offset_bottom = 676.0
+offset_left = 1026.0
+offset_top = 314.0
+offset_right = 1066.0
+offset_bottom = 354.0
 scale = Vector2(2.2203, 2.13489)
 script = ExtResource("5_3lh42")
 level_to_navigate = "2"
 
 [node name="NavigationButton" type="Sprite2D" parent="NavigationButton_1"]
-position = Vector2(141.422, -148.485)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("6_vmhy7")
 centered = false

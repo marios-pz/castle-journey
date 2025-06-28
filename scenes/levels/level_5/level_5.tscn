@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvfhlequ1vt52"]
+[gd_scene load_steps=4 format=3 uid="uid://bvfhlequ1vt52"]
 
 [ext_resource type="Texture2D" uid="uid://ccgiywf2355fb" path="res://scenes/levels/level_5/5.png" id="1_wyyac"]
+[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_iaf1b"]
+[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_esomf"]
 
 [node name="Level5" type="Control"]
 layout_mode = 3
@@ -9,3 +11,19 @@ anchors_preset = 0
 [node name="5" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_wyyac")
+
+[node name="NavigationButton_3" type="TextureButton" parent="."]
+offset_left = 929.0
+offset_top = 633.0
+offset_right = 969.0
+offset_bottom = 673.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("2_iaf1b")
+level_to_navigate = "6"
+
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
+position = Vector2(18.466, 19.6732)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("3_esomf")
+
+[connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]

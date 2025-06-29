@@ -23,12 +23,11 @@ texture = ExtResource("1_68es0")
 
 [node name="NavigationButton_3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1026.0
-offset_top = 314.0
-offset_right = 1066.0
-offset_bottom = 354.0
+offset_left = 975.0
+offset_top = 567.0
+offset_right = 1015.0
+offset_bottom = 607.0
 scale = Vector2(2.2203, 2.13489)
-mouse_filter = 0
 script = ExtResource("2_bfr33")
 level_to_navigate = "3"
 

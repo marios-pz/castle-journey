@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqxho8gly40qs"]
+
+[ext_resource type="Texture2D" uid="uid://dcip85x68r8ws" path="res://scenes/levels/level_7/7.png" id="1_qn38e"]
+[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_fcw3w"]
+[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_pvvhy"]
+
+[node name="Level7" type="Node2D"]
+
+[node name="7" type="Sprite2D" parent="."]
+texture = ExtResource("1_qn38e")
+centered = false
+
+[node name="NavigationButton_3" type="TextureButton" parent="."]
+offset_left = 1821.0
+offset_top = 552.0
+offset_right = 1861.0
+offset_bottom = 592.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("2_fcw3w")
+level_to_navigate = "8"
+
+[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
+position = Vector2(18.466, 19.6732)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("3_pvvhy")
+
+[connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]

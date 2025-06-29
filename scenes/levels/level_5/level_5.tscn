@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvfhlequ1vt53"]
 
-[ext_resource type="Texture2D" uid="uid://ccgiywf2355fb" path="res://scenes/levels/level_5/5.png" id="1_wyyac"]
 [ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_7uxs1"]
+[ext_resource type="Texture2D" uid="uid://ccgiywf2355fb" path="res://scenes/levels/level_5/5.png" id="1_wyyac"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_iaf1b"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_esomf"]
 
@@ -20,14 +20,14 @@ position = Vector2(960, 540)
 texture = ExtResource("1_wyyac")
 
 [node name="NavigationButton_3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 929.0
 offset_top = 633.0
 offset_right = 969.0
 offset_bottom = 673.0
 scale = Vector2(2.2203, 2.13489)
-mouse_filter = 0
 script = ExtResource("2_iaf1b")
-level_to_navigate = "1"
+level_to_navigate = "6"
 
 [node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
 position = Vector2(18.466, 19.6732)

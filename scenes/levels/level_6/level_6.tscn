@@ -17,7 +17,7 @@ offset_right = 981.0
 offset_bottom = 176.0
 scale = Vector2(2.2203, 2.13489)
 script = ExtResource("2_lyw32")
-level_to_navigate = "6"
+level_to_navigate = "7"
 
 [node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
 position = Vector2(18.466, 19.6732)

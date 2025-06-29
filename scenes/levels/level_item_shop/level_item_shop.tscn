@@ -8,7 +8,12 @@
 
 [node name="LevelItemShop" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_l583c")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -27,6 +32,7 @@ offset_top = 305.0
 offset_right = 931.0
 offset_bottom = 345.0
 scale = Vector2(2.2203, 2.13489)
+mouse_filter = 0
 script = ExtResource("5_l583c")
 
 [node name="NavigationButton" type="Sprite2D" parent="ShopButton"]
@@ -41,6 +47,7 @@ offset_top = 355.0
 offset_right = 931.0
 offset_bottom = 395.0
 scale = Vector2(2.2203, 2.13489)
+mouse_filter = 0
 script = ExtResource("2_l583c")
 level_to_navigate = "1"
 

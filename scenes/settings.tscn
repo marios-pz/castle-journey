@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1ksdr6eamidy"]
+[gd_scene load_steps=3 format=3 uid="uid://d1ksdr6eamidy"]
 
 [ext_resource type="Script" uid="uid://c7g2y00sno6q6" path="res://scripts/settings/back.gd" id="1_rbmmp"]
+[ext_resource type="Script" path="res://scripts/settings/settings_controls.gd" id="2_settings"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_settings")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -17,6 +19,31 @@ offset_top = 229.0
 offset_right = 686.0
 offset_bottom = 257.0
 text = "Settings"
+
+[node name="MusicLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 280.0
+offset_right = 686.0
+offset_bottom = 308.0
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 320.0
+offset_right = 686.0
+offset_bottom = 340.0
+max_value = 100.0
+value = 50.0
+
+[node name="MuteButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 350.0
+offset_right = 618.0
+offset_bottom = 378.0
+text = "Mute Music"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -28,3 +55,5 @@ text = "Back"
 script = ExtResource("1_rbmmp")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_changed"]
+[connection signal="pressed" from="MuteButton" to="." method="_on_mute_button_pressed"]

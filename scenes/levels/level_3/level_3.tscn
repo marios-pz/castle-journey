@@ -7,7 +7,12 @@
 
 [node name="Level3" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_kvnv3")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -18,13 +23,14 @@ texture = ExtResource("1_jwa6q")
 
 [node name="NavigationButton_4" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 891.0
-offset_top = 305.0
-offset_right = 931.0
-offset_bottom = 345.0
+offset_left = 1026.0
+offset_top = 314.0
+offset_right = 1066.0
+offset_bottom = 354.0
 scale = Vector2(2.2203, 2.13489)
+mouse_filter = 0
 script = ExtResource("2_bfr33")
-level_to_navigate = "4"
+level_to_navigate = "5"
 
 [node name="NavigationButton" type="Sprite2D" parent="NavigationButton_4"]
 position = Vector2(18.466, 19.6732)

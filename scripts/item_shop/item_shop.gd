@@ -58,9 +58,15 @@ func _on_exit_pressed() -> void:
 
 func open() -> void:
 	visible = true
+	# Ensure item shop is on top
+	z_index = 1500
+	# Block input behind item shop
+	mouse_filter = Control.MOUSE_FILTER_STOP
 	update_slots()
 
 func close() -> void:
 	visible = false
+	# Allow input to pass through when closed
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if selected_slot != -1:
 		selected_slot = -1 

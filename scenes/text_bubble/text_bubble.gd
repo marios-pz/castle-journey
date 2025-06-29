@@ -1,5 +1,7 @@
 extends Control
 
+signal text_completed
+
 var current_texts: Array = []
 var current_index: int = 0
 
@@ -18,6 +20,8 @@ func show_texts(level_id: String) -> void:
 				current_texts = data[level_id]
 				current_index = 0
 				visible = true
+				# Ensure text bubble is on top
+				z_index = 999
 				_update_text()
 			else:
 				visible = false
@@ -38,6 +42,8 @@ func show_npc_text(npc_id: String) -> void:
 				current_texts = data[npc_id]
 				current_index = 0
 				visible = true
+				# Ensure text bubble is on top
+				z_index = 999
 				_update_text()
 			else:
 				visible = false
@@ -53,10 +59,14 @@ func _update_text() -> void:
 	else:
 		visible = false
 		$NextButton.visible = false
+		# Emit signal when text is completed
+		text_completed.emit()
 
 func _on_next_button_pressed() -> void:
 	current_index += 1
 	if current_index >= current_texts.size():
 		visible = false
 		$NextButton.visible = false
+		# Emit signal when text is completed
+		text_completed.emit()
 	_update_text() 

@@ -1,27 +1,43 @@
 {
+	"cutscene_0": [
+		"You wake up in a dense forest, your head pounding with confusion. The last thing you remember is... nothing. Your name, your past, even how you got here - all lost in a fog of forgotten memories.",
+		"The forest around you is ancient, with towering trees that seem to whisper secrets of ages past. In the distance, you can see the silhouette of a magnificent castle rising above the treeline.",
+		"Your only goal is clear: reach that castle. Something deep within you tells you that answers await there, answers about who you are and why you can't remember anything."
+	],
 	"level_1": [
-		"Welcome to the first level!",
-		"This is where your adventure begins.",
-		"Explore the world and complete quests!"
+		"You find yourself in the ancient forest, the castle now clearly visible ahead. The path forward is blocked by fallen branches and scattered debris.",
+		"Among the forest floor, you notice the remains of an old campfire. The ashes are still warm, as if someone was here recently.",
+		"To continue your journey to the castle, you'll need to clear the path. Perhaps you can use some of these scattered materials to help you progress.",
+		"The forest seems to guide you toward the castle, its ancient trees creating a natural pathway through the undergrowth."
 	],
 	"level_2": [
-		"You've reached level 2!",
-		"Things are getting more interesting now.",
-		"Keep going, adventurer!"
+		"You've reached the imposing castle gates. Massive stone walls tower above you, their weathered surface telling stories of countless battles and sieges.",
+		"Two guards stand watch at the entrance. One looks stern and suspicious, while the other seems more approachable. The stern guard stops you immediately.",
+		"'Halt! Who goes there?' the guard demands. 'I haven't seen you around these parts before. Unless you have a proper pass, I cannot let you through.'",
+		"The other guard gives you a knowing look. 'Perhaps you should speak with my colleague over there. He might be more... accommodating.'"
 	],
 	"level_3": [
-		"You've reached level 3!",
-		"Things are getting more interesting now.",
-		"Keep going, adventurer!"
+		"Welcome to the castle town square! The bustling marketplace is alive with merchants, craftsmen, and townspeople going about their daily lives.",
+		"The air is filled with the sounds of haggling, the smell of fresh bread, and the sight of colorful banners fluttering in the breeze. This place feels... familiar somehow.",
+		"You notice a small chapel on one side of the square, its stained glass windows catching the morning light. Something about it tugs at your memory.",
+		"An old historian sits near the fountain, reading from a weathered tome. He looks up as you approach, his eyes filled with ancient wisdom."
 	],
 	"level_4": [
-		"You've reached level 4!",
-		"Things are getting more interesting now.",
-		"Keep going, adventurer!"
+		"You've entered the castle's central tower - the heart of the fortress. The air here is thick with history and mystery.",
+		"Ancient tapestries line the walls, depicting scenes from the castle's past. One particular tapestry catches your eye - it shows a figure that looks strangely familiar.",
+		"The tower's library is filled with dusty tomes and scrolls. Among them, you find fragments of what appears to be your own story, scattered across different books.",
+		"As you piece together the fragments, memories begin to flood back. You start to remember your role in this castle's history, and why you were sent away."
+	],
+	"level_5": [
+		"You stand at the final bridge leading to the castle's inner sanctum. The bridge spans a deep chasm, and beyond it lies the truth about your identity.",
+		"The bridge itself seems to pulse with ancient magic. It's not just a physical crossing - it's a test of character and memory.",
+		"Three paths lie before you, each representing a different aspect of your forgotten self. The choices you make here will determine not just your fate, but the future of the castle itself.",
+		"Memories flood back: you were once the castle's guardian, entrusted with protecting its secrets. But something went wrong, and you were forced to flee, your memories sealed away for your own protection."
 	],
 	"level_item_shop": [
-		"Welcome to the Item Shop!",
-		"Here you can buy items with your gold.",
-		"Click on an item once to select it, then again to purchase."
+		"Welcome to the Castle Souvenirs Shop! Here you can purchase authentic items from the castle's rich history.",
+		"Each item tells a story - from ancient weapons used in the castle's defense to books containing the wisdom of generations past.",
+		"These aren't just souvenirs; they're pieces of history that might help you remember your own past and understand your connection to this place.",
+		"Choose wisely, for some items may hold the key to unlocking the deeper mysteries of the castle and your own identity."
 	]
 } 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bblqoxhmbeuir" path="res://scenes/text_bubble/text_bubble.gd" id="1_l583c"]
 
 [node name="TextBubble" type="Control"]
+z_index = 999
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -15,6 +16,7 @@ offset_right = -390.0
 offset_bottom = -340.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_l583c")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -24,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.6, 0.8, 0.9)
+color = Color(1, 1, 1, 0.9)
 
 [node name="Text" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -37,6 +39,7 @@ offset_right = -20.0
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Text goes here..."
 

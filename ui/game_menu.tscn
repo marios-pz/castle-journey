@@ -33,7 +33,7 @@ func _on_pressed() -> void:
 "
 
 [node name="Menu" type="Control"]
-z_index = 1
+z_index = 200
 layout_mode = 3
 anchor_left = 0.139
 anchor_top = 0.149

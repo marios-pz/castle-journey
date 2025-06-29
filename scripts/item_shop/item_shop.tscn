@@ -1,22 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8n5hjmdfm1mm"]
+[gd_scene load_steps=3 format=3 uid="uid://b8n5hjmdfm1mm"]
 
-[ext_resource type="Script" uid="uid://b8n5hjmdfm1mm" path="res://scripts/item_shop/item_shop.gd" id="1_0y8ig"]
-[ext_resource type="Texture2D" uid="uid://d2ux5dr464ihq" path="res://ui/inventory/inventory_background.png" id="2_0y8ig"]
+[ext_resource type="Script" uid="uid://by50reii24s5c" path="res://scripts/item_shop/item_shop.gd" id="1_0y8ig"]
 [ext_resource type="PackedScene" uid="uid://tn8pea20bper" path="res://scripts/inventory/slot/inventory_slot.tscn" id="3_0y8ig"]
 
 [node name="ItemShop" type="Control"]
+z_index = 150
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_0y8ig")
 
-[node name="ShopBackground" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-scale = Vector2(1.77747, 1.80361)
-texture = ExtResource("2_0y8ig")
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 20.0
+offset_right = 186.0
+offset_bottom = 43.0
+text = "Item Shop"
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -25,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -150.0
-offset_right = 200.0
-offset_bottom = 150.0
+offset_left = -946.0
+offset_top = -477.0
+offset_right = -546.0
+offset_bottom = -177.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 4
@@ -64,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = 180.0
-offset_right = 40.0
-offset_bottom = 220.0
+offset_left = -724.0
+offset_top = -530.0
+offset_right = -644.0
+offset_bottom = -490.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Exit" 
+text = "Exit"

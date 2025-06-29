@@ -13,6 +13,8 @@ var is_open = false
 func _ready() -> void:
 	# add_item_resource(item)
 	close()
+	# Set mouse filter to block input behind inventory
+	mouse_filter = Control.MOUSE_FILTER_STOP
 
 func update_slots():
 	var grid_children = grid.get_children()
@@ -47,10 +49,16 @@ func _process(delta: float) -> void:
 func open():
 	visible = true
 	is_open = true
+	# Ensure inventory is on top
+	z_index = 1000
+	# Block input behind inventory
+	mouse_filter = Control.MOUSE_FILTER_STOP
 
 func close():
 	visible = false
 	is_open = false
+	# Allow input to pass through when closed
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
 

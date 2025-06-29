@@ -10,5 +10,51 @@
 		"Don't mind my partner, he's always been a bit... strict.",
 		"I might be able to help you get that pass you need.",
 		"Just bring me three city tokens, and I'll see what I can do."
+	],
+	"town_merchant": [
+		"Welcome, traveler! I've been selling goods in this square for thirty years.",
+		"These tokens you're looking for... they're not just currency, you know.",
+		"Each token represents a piece of our castle's history. The baker has one, the blacksmith another, and the historian keeps the third.",
+		"They say the tokens were created by the castle's ancient guardian, long before the current troubles began."
+	],
+	"castle_baker": [
+		"Fresh bread! Hot from the oven!",
+		"You look like someone who's traveled far. Here, have a loaf on the house.",
+		"That token you're asking about? It's been in my family for generations.",
+		"My grandmother used to tell stories about the castle's guardian who protected us all. But that was before the darkness came."
+	],
+	"castle_blacksmith": [
+		"*clang clang* Welcome to my forge, stranger!",
+		"I've been crafting weapons and tools for the castle guard for twenty years.",
+		"The token? Aye, I have it. It's been passed down through my family since the time of the great guardian.",
+		"These walls have seen many protectors come and go, but none like the one who came before the darkness."
+	],
+	"castle_historian": [
+		"Ah, a seeker of knowledge! Come, sit with me by the fountain.",
+		"I've spent my life studying the castle's history. There are many secrets hidden in these walls.",
+		"The token you seek is the last piece of a puzzle. The other two are held by the baker and blacksmith.",
+		"Long ago, there was a guardian who protected this castle with ancient magic. But something went wrong, and they disappeared.",
+		"Some say the guardian's memories were sealed away for protection. Others say they still walk among us, waiting to remember."
+	],
+	"ghost_guide": [
+		"*A spectral figure materializes before you*",
+		"Welcome back, old friend. Though I doubt you remember me.",
+		"I am the spirit of this castle, and I have been waiting for your return.",
+		"The memories you seek are scattered throughout these halls, like pages torn from a book.",
+		"Each level you complete brings you closer to the truth about who you really are.",
+		"Beware the darkness that drove you away. It still lingers in the castle's depths.",
+		"Find the three tokens, unlock the tower's secrets, and cross the final bridge. Only then will you remember everything."
+	],
+	"final_guardian": [
+		"*A figure emerges from the shadows at the bridge*",
+		"So you've returned at last. I wondered if you would ever find your way back.",
+		"I am the current guardian of this castle, but I am not the true guardian. That title belongs to you.",
+		"Long ago, you protected this castle with ancient magic. But when the darkness came, you chose to flee rather than fight.",
+		"Your memories were sealed away to protect you from the darkness that sought to consume you.",
+		"Now you stand at the bridge of choices. Three paths lie before you:",
+		"Path of Memory: Remember everything and face the darkness once more.",
+		"Path of Peace: Stay in the castle as a simple citizen, never knowing the truth.",
+		"Path of Power: Embrace the darkness and become its master.",
+		"Choose wisely, for your decision will determine the fate of this castle and all who dwell within."
 	]
 } 

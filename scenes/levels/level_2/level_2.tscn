@@ -2,10 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://dr1d6b4pv4smp" path="res://scenes/levels/level_2/2.png" id="1_68es0"]
 [ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_e74df"]
-[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="5_68es0"]
-[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="5_e74df"]
+[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_bfr33"]
+[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_o2n0b"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_e74df")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -15,18 +22,20 @@ position = Vector2(960, 540)
 texture = ExtResource("1_68es0")
 
 [node name="NavigationButton_3" type="TextureButton" parent="."]
-offset_left = 963.0
-offset_top = 579.0
-offset_right = 1003.0
-offset_bottom = 619.0
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 314.0
+offset_right = 1066.0
+offset_bottom = 354.0
 scale = Vector2(2.2203, 2.13489)
-script = ExtResource("5_68es0")
+mouse_filter = 0
+script = ExtResource("2_bfr33")
 level_to_navigate = "3"
 
 [node name="NavigationButton" type="Sprite2D" parent="NavigationButton_3"]
 position = Vector2(18.466, 19.6732)
 scale = Vector2(0.45039, 0.468409)
-texture = ExtResource("5_e74df")
+texture = ExtResource("3_o2n0b")
 
 [connection signal="ready" from="." to="." method="_ready"]
 [connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]

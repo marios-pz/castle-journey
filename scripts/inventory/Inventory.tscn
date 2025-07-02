@@ -10,14 +10,21 @@ anchors_preset = 0
 mouse_filter = 2
 script = ExtResource("1_45f7y")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 116.0
+offset_right = 2016.0
+offset_bottom = 890.0
+
 [node name="GridContainer" type="GridContainer" parent="."]
 clip_contents = true
 layout_direction = 2
 layout_mode = 0
-offset_left = 581.0
-offset_top = 346.0
-offset_right = 985.0
-offset_bottom = 614.0
+offset_left = 975.0
+offset_top = 349.0
+offset_right = 1379.0
+offset_bottom = 617.0
 scale = Vector2(1.77747, 1.80361)
 columns = 6
 
@@ -92,3 +99,46 @@ layout_mode = 2
 
 [node name="InventorySlot24" parent="GridContainer" instance=ExtResource("2_pjs63")]
 layout_mode = 2
+
+[node name="EquipmentSlots" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 205.0
+offset_right = 300.0
+offset_bottom = 541.0
+scale = Vector2(2, 2)
+
+[node name="HelmetSlot" parent="EquipmentSlots" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="ArmorSlot" parent="EquipmentSlots" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="HandsSlot" parent="EquipmentSlots" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="LeggingsSlot" parent="EquipmentSlots" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="WeaponSlot" parent="EquipmentSlots" instance=ExtResource("2_pjs63")]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1244.0
+offset_top = 259.0
+offset_right = 1319.0
+offset_bottom = 282.0
+scale = Vector2(2.42465, 2.47637)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Inventory"
+
+[node name="EquippedLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 135.0
+offset_right = 289.0
+offset_bottom = 158.0
+scale = Vector2(2.35236, 2.38895)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Equipped"

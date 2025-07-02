@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bow4mbhr8m7sk"
-path="res://.godot/imported/item_shop.jpg-4690a11a67c7e5a4db62b44f4ac4f676.ctex"
+uid="uid://slcie7ly2uom"
+path="res://.godot/imported/sword.png-847a038487b8fb3480b77e98fb70eb52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/item_shop/item_shop.jpg"
-dest_files=["res://.godot/imported/item_shop.jpg-4690a11a67c7e5a4db62b44f4ac4f676.ctex"]
+source_file="res://assets/items/sword.png"
+dest_files=["res://.godot/imported/sword.png-847a038487b8fb3480b77e98fb70eb52.ctex"]
 
 [params]
 

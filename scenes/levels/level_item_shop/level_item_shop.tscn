@@ -1,62 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3pg6cykahy6e"]
+[gd_scene load_steps=2 format=3 uid="uid://7sstla6pkegs"]
 
-[ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_l583c"]
-[ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_l583c"]
-[ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_o2n0b"]
-[ext_resource type="PackedScene" uid="uid://c8qabe6mm7ltm" path="res://scenes/levels/item_shop/item_shop.tscn" id="4_l583c"]
-[ext_resource type="Script" uid="uid://dv8rjf8wgmna1" path="res://scripts/item_shop/shop_button.gd" id="5_l583c"]
+[ext_resource type="Texture2D" uid="uid://cws3foltwp8lt" path="res://scenes/levels/level_item_shop/item_shop_background.jpg" id="1_6w5i6"]
 
-[node name="LevelItemShop" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("1_l583c")
+[node name="LevelItemShop" type="Node2D"]
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.2, 0.2, 0.2, 1)
-
-[node name="ShopButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 891.0
-offset_top = 305.0
-offset_right = 931.0
-offset_bottom = 345.0
-scale = Vector2(2.2203, 2.13489)
-script = ExtResource("5_l583c")
-
-[node name="NavigationButton" type="Sprite2D" parent="ShopButton"]
-position = Vector2(18.466, 19.6732)
-scale = Vector2(0.45039, 0.468409)
-texture = ExtResource("3_o2n0b")
-
-[node name="NavigationButton_1" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 891.0
-offset_top = 355.0
-offset_right = 931.0
-offset_bottom = 395.0
-scale = Vector2(2.2203, 2.13489)
-script = ExtResource("2_l583c")
-level_to_navigate = "1"
-
-[node name="NavigationButton" type="Sprite2D" parent="NavigationButton_1"]
-position = Vector2(18.466, 19.6732)
-scale = Vector2(0.45039, 0.468409)
-texture = ExtResource("3_o2n0b")
-
-[node name="ItemShop" parent="." instance=ExtResource("4_l583c")]
-layout_mode = 1
-
-[connection signal="ready" from="." to="." method="_ready"]
-[connection signal="pressed" from="ShopButton" to="ShopButton" method="_on_pressed"]
-[connection signal="pressed" from="NavigationButton_1" to="NavigationButton_1" method="_on_pressed"]
+[node name="ItemShopBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_6w5i6")
+centered = false

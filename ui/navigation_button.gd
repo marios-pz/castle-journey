@@ -8,6 +8,9 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	print("Navigation button pressed! Going to level: ", level_to_navigate)
+	if level_to_navigate == "credits":
+		get_tree().change_scene_to_file("res://scenes/cutscenes/credits.tscn")
+		return
 	var path = "res://scenes/levels/level_{level}/level_{level}.tscn".format({"level": level_to_navigate})
 	print("Changing to scene: ", path)
 	get_tree().change_scene_to_file(path)

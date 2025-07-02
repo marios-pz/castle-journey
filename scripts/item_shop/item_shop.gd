@@ -19,7 +19,7 @@ func _ready() -> void:
 	for i in range(shop_items.size()):
 		var slot = TextureButton.new()
 		slot.custom_minimum_size = Vector2(64, 64)
-		slot.expand_mode = TextureButton.EXPAND_FILL
+		# slot.expand_mode = TextureButton.EXPAND_FILL
 		slot.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
 		slot.texture_normal = shop_items[i].texture
 		slot.pressed.connect(_on_slot_pressed.bind(i))

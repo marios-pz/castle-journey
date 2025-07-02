@@ -3,8 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dcip85x68r8ws" path="res://scenes/levels/level_7/7.png" id="1_qn38e"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_fcw3w"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_pvvhy"]
+[ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_l583c"]
 
-[node name="Level7" type="Node2D"]
+[node name="Level7" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("1_l583c")
 
 [node name="7" type="Sprite2D" parent="."]
 texture = ExtResource("1_qn38e")

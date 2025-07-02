@@ -23,7 +23,6 @@ GameManager="*res://scripts/game_manager/game_manager.tscn"
 
 window/size/viewport_width=1980
 window/size/viewport_height=1080
-window/size/mode=2
 window/stretch/mode="viewport"
 
 [input]

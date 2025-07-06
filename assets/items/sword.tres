@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c4d5e6f7g8iai"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://3yfhdo2pi1qr"]
 
 [ext_resource type="Script" uid="uid://ca0cnrctber4s" path="res://scripts/items/item.gd" id="1_3f5nx"]
 [ext_resource type="Texture2D" uid="uid://slcie7ly2uom" path="res://assets/items/sword.png" id="2_s3sdd"]
@@ -7,4 +7,5 @@
 script = ExtResource("1_3f5nx")
 name = "Sword"
 texture = ExtResource("2_s3sdd")
-price = 200
+price = 100
+item_type = "weapon"

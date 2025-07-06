@@ -17,6 +17,8 @@ var game_manager: Node
 var stick_item = preload("res://assets/items/stick.tres")
 var sword_item = preload("res://assets/items/sword.tres")
 var armor_item = preload("res://assets/items/armor.tres")
+var leggings_item = preload("res://assets/items/leggings.tres")
+var hands_item = preload("res://assets/items/hands.tres")
 
 func _ready():
 	# Wait for the next frame to ensure all nodes are ready
@@ -68,6 +70,13 @@ func _ready():
 	
 	# Show UI when entering the shop
 	item_shop_ui.visible = true
+	
+	# Set up timer to update gold display continuously
+	var timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 0.1  # Update every 0.1 seconds
+	timer.timeout.connect(update_coin_display)
+	timer.start()
 
 func setup_inventory_slots():
 	# Check if inventory grid exists
@@ -80,17 +89,17 @@ func setup_inventory_slots():
 		var slot = preload("res://scripts/inventory/slot/inventory_slot.tscn").instantiate()
 		inventory_grid.add_child(slot)
 		inventory_slots.append(slot)
+		
+		# Connect buy signal for all slots
+		slot.buy_item_requested.connect(_on_item_buy_requested)
 	
-	# Add items to the first few slots
-	if stick_item:
-		inventory_slots[0].set_item(stick_item)
-		inventory_slots[0].buy_item_requested.connect(_on_item_buy_requested)
-	if sword_item:
-		inventory_slots[1].set_item(sword_item)
-		inventory_slots[1].buy_item_requested.connect(_on_item_buy_requested)
-	if armor_item:
-		inventory_slots[2].set_item(armor_item)
-		inventory_slots[2].buy_item_requested.connect(_on_item_buy_requested)
+	# Add items to shop - easily modifiable array
+	var shop_items = [stick_item, sword_item, armor_item, leggings_item, hands_item]
+	
+	# Place items in slots
+	for i in range(shop_items.size()):
+		if i < inventory_slots.size() and shop_items[i]:
+			inventory_slots[i].set_item(shop_items[i])
 
 func update_coin_display():
 	if coin_label and game_manager:
@@ -126,6 +135,9 @@ func _on_item_buy_requested(item: Item) -> void:
 		# Player has enough gold
 		game_manager.gold -= item.price
 		print("Successfully bought ", item.name, "! Remaining gold: ", game_manager.gold)
+		
+		# Add item to player's inventory
+		game_manager.add_item(item)
 		
 		# Show success notification
 		show_notification("Successfully bought " + item.name + "!", false)

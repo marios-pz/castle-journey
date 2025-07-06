@@ -8,3 +8,4 @@ script = ExtResource("1_3f5nx")
 name = "Hands"
 texture = ExtResource("2_462fm")
 price = 80
+item_type = "hands"

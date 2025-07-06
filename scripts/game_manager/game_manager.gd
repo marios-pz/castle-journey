@@ -1,6 +1,6 @@
 extends Node2D
 
-var gold: int = 200
+var gold: int = 600
 var current_level: String = ""
 var inventory: Control
 var text_bubble: Control

@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bq8x70a01a2b3"]
 
-[ext_resource type="Script" uid="uid://ca0cnrctber4s" path="res://scripts/items/item.gd" id="1_ipy22"]
+[ext_resource type="Script" uid="uid://ca0cnrctber4s" path="res://scripts/items/item.gd" id="1_3f5nx"]
 [ext_resource type="Texture2D" uid="uid://chwpj06aqvtd5" path="res://assets/items/armor.png" id="2_3ypl6"]
 
 [resource]
-script = ExtResource("1_ipy22")
+script = ExtResource("1_3f5nx")
 name = "Armor"
 texture = ExtResource("2_3ypl6")
 price = 150
+item_type = "armor"

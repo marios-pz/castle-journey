@@ -31,6 +31,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		set_item(data.current_item)
 		
 func set_item(item: Item) -> void:
+	if not item is Item:
+		print("Error: set_item called with non-Item type: ", typeof(item))
+		return
 	current_item = item
 	item_visual.visible = true
 	item_visual.texture = item.texture
@@ -41,6 +44,9 @@ func unset_item() -> void:
 	item_visual.texture = null
 
 func update(item: Item):
+	if item != null and not item is Item:
+		print("Error: update called with non-Item type: ", typeof(item))
+		return
 	current_item = item
 	if !item:
 		item_visual.visible = false

@@ -8,3 +8,4 @@ script = ExtResource("1_3f5nx")
 name = "Stick"
 texture = ExtResource("2_3f5nx")
 price = 0
+item_type = "weapon"

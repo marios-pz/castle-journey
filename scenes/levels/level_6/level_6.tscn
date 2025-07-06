@@ -1,16 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgwxdxgti0n0b"]
+[gd_scene load_steps=5 format=3 uid="uid://dgwxdxgti0n0b"]
 
 [ext_resource type="Texture2D" uid="uid://gy1nb1po00wb" path="res://scenes/levels/level_6/6.png" id="1_aepjr"]
+[ext_resource type="Script" uid="uid://dmhbeslgnvuf5" path="res://scenes/levels/change_level.gd" id="1_l583c"]
 [ext_resource type="Script" uid="uid://c7jc0wvg8yl7x" path="res://ui/navigation_button.gd" id="2_lyw32"]
 [ext_resource type="Texture2D" uid="uid://bcbh8gl0rqame" path="res://ui/navigation_button.png" id="3_wrmk6"]
 
-[node name="Level6" type="Node2D"]
+[node name="Level6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l583c")
 
 [node name="6" type="Sprite2D" parent="."]
 texture = ExtResource("1_aepjr")
 centered = false
 
 [node name="NavigationButton_3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 941.0
 offset_top = 136.0
 offset_right = 981.0
@@ -24,4 +33,20 @@ position = Vector2(18.466, 19.6732)
 scale = Vector2(0.45039, 0.468409)
 texture = ExtResource("3_wrmk6")
 
+[node name="GoToItemShop" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1307.0
+offset_top = 249.0
+offset_right = 1347.0
+offset_bottom = 289.0
+scale = Vector2(2.2203, 2.13489)
+script = ExtResource("2_lyw32")
+level_to_navigate = "item_shop"
+
+[node name="NavigationButton" type="Sprite2D" parent="GoToItemShop"]
+position = Vector2(18.466, 19.6732)
+scale = Vector2(0.45039, 0.468409)
+texture = ExtResource("3_wrmk6")
+
 [connection signal="pressed" from="NavigationButton_3" to="NavigationButton_3" method="_on_pressed"]
+[connection signal="pressed" from="GoToItemShop" to="GoToItemShop" method="_on_pressed"]

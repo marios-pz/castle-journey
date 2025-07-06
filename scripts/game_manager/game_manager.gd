@@ -1,10 +1,11 @@
 extends Node2D
 
-var gold: int = 200
+var gold: int = 600
 var current_level: String = ""
 var inventory: Control
 var text_bubble: Control
 var background_music: AudioStreamPlayer
+var gold_label: RichTextLabel
 
 # Music tracks for different levels
 var level_music_tracks = {
@@ -19,13 +20,15 @@ var level_music_tracks = {
 var current_music_track: String = ""
 
 func _process(delta: float) -> void:
-	$UiPanel/RichTextLabel.text = "GOLD: " + str(gold)
+	if gold_label:
+		gold_label.text = "GOLD: " + str(gold)
 
 func _ready() -> void:
 	# Initialize references
-	inventory = $Inventory
-	text_bubble = $TextBubble
+	inventory = $CanvasLayer/Inventory
+	text_bubble = $CanvasLayer/TextBubble
 	background_music = $BackgroundMusic
+	gold_label = $CanvasLayer/UiPanel/RichTextLabel
 	
 	# Debug prints
 	print("Inventory: ", inventory)
@@ -40,6 +43,9 @@ func _ready() -> void:
 		text_bubble.visible = false
 	# Setup background music
 	setup_background_music()
+
+	# Hide QuestPanel if not in a level scene
+	_hide_quest_panel_if_not_level()
 
 func setup_background_music() -> void:
 	if background_music:
@@ -72,6 +78,11 @@ func set_current_level(level: String) -> void:
 	show_level_text()
 	# Change music for the new level
 	change_level_music(level)
+
+	# Quest logic: start/complete quests based on level
+	if "QuestManager" in self:
+		self.QuestManager.try_complete_quests_for_level(level)
+		self.QuestManager.try_start_quests_for_level(level)
 
 func change_level_music(level: String) -> void:
 	if level_music_tracks.has(level):
@@ -107,3 +118,10 @@ func resume_music() -> void:
 func set_music_volume(volume_db: float) -> void:
 	if background_music:
 		background_music.volume_db = volume_db 
+
+func _hide_quest_panel_if_not_level() -> void:
+	var scene_path = get_tree().current_scene.scene_file_path
+	if not scene_path.begins_with("res://scenes/levels/"):
+		var quest_panel = $CanvasLayer/QuestPanel
+		if quest_panel:
+			quest_panel.visible = false

@@ -1,0 +1,10 @@
+{
+  "demo_quest": {
+    "name": "Πήγαινε στο Καστροπολιτεία",
+    "description": "Ο στόχος σου είναι να φτάσεις στο Καστροπολιτεία (level 6).",
+    "reach_goal_text": "Έφτασες στο Καστροπολιτεία!",
+    "start_level": "level_1",
+    "end_level": "level_6",
+    "reward_amount": 100
+  }
+} 

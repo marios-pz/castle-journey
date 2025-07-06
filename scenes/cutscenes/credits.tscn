@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvonjpiknsuie"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CreditsLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+anchor_left = 0.3
+anchor_top = 0.3
+anchor_right = 0.7
+anchor_bottom = 0.7
+text = "[center][b]CREDITS[/b]
+
+X Programmer
+Y Programmer
+Z Art
+
+Castle Journey Demo[/center]"
+fit_content = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnuk3spuu3i10"
-path="res://.godot/imported/stick.png-ae60ba62e5f5947af3b13949fc96961d.ctex"
+uid="uid://slcie7ly2uom"
+path="res://.godot/imported/sword.png-847a038487b8fb3480b77e98fb70eb52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/inventory/items/stick.png"
-dest_files=["res://.godot/imported/stick.png-ae60ba62e5f5947af3b13949fc96961d.ctex"]
+source_file="res://assets/items/sword.png"
+dest_files=["res://.godot/imported/sword.png-847a038487b8fb3480b77e98fb70eb52.ctex"]
 
 [params]
 

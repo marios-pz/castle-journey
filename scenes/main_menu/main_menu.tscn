@@ -57,6 +57,14 @@ offset_bottom = 41.92
 scale = Vector2(1.00123, 0.97102)
 script = ExtResource("2_0ebjn")
 
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -78.903
+offset_top = -58.7011
+offset_right = -38.903
+offset_bottom = -18.7011
+scale = Vector2(4.9765, 4.46919)
+
 [node name="Play" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
@@ -86,6 +94,7 @@ offset_right = 57.5
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Castle Journey"
 fit_content = true
 

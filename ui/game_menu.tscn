@@ -16,20 +16,52 @@ func _on_pressed() -> void:
 	settings_node.visible = true
 "
 
+[sub_resource type="GDScript" id="GDScript_wiki"]
+resource_name = "wiki"
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	# Try different possible paths for the wiki
+	var possible_paths = []
+	
+	# Path 1: Next to the executable
+	var exe_path = OS.get_executable_path()
+	if exe_path != \"\":
+		possible_paths.append(exe_path.get_base_dir() + \"/wiki/index.html\")
+	
+	# Path 2: Current working directory
+	possible_paths.append(OS.get_user_data_dir().get_base_dir().get_base_dir() + \"/wiki/index.html\")
+	
+	possible_paths.append(ProjectSettings.globalize_path(\"res://wiki/index.html\"))
+	# Path 3: User data directory
+	possible_paths.append(OS.get_user_data_dir() + \"/wiki/index.html\")
+	
+	# Try each path
+	for path in possible_paths:
+		print(\"Trying wiki path: \")
+		print(path)
+		if FileAccess.file_exists(path):
+			print(\"Found wiki at: \" + path)
+			OS.shell_open(\"file://\" + path)
+			return
+	
+	# If not found, try to open the wiki directory
+	var wiki_dir = OS.get_executable_path().get_base_dir() + \"/wiki/\"
+	if DirAccess.dir_exists_absolute(wiki_dir):
+		OS.shell_open(\"file://\" + wiki_dir)
+		print(\"Opened wiki directory: \" + wiki_dir)
+	else:
+		print(\"Wiki directory not found. Tried paths:\")
+		for path in possible_paths:
+			print(\"  \" + path)
+"
+
 [sub_resource type="GDScript" id="GDScript_ysvk1"]
 resource_name = "exit"
 script/source = "extends Button
 
 func _on_pressed() -> void:
 	get_tree().quit()
-"
-
-[sub_resource type="GDScript" id="GDScript_wiki"]
-resource_name = "wiki"
-script/source = "extends Button
-
-func _on_pressed() -> void:
-	OS.shell_open(\"file://\" + ProjectSettings.globalize_path(\"res://wiki/index.html\"))
 "
 
 [node name="Menu" type="Control"]

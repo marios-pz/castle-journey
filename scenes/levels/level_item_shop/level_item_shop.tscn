@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7sstla6pkegs"]
 
 [ext_resource type="Texture2D" uid="uid://cws3foltwp8lt" path="res://scenes/levels/level_item_shop/item_shop_background.jpg" id="1_6w5i6"]
-[ext_resource type="Script" path="res://scripts/item_shop.gd" id="2_script"]
+[ext_resource type="Script" uid="uid://c4xgr2jpf3l03" path="res://scripts/item_shop.gd" id="2_script"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 bg_color = Color(0.2, 0.2, 0.2, 0.8)
@@ -75,6 +75,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="NotificationLabel" type="Label" parent="ItemShopUI/BackgroundPanel"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -84,10 +85,8 @@ offset_top = 60.0
 offset_right = 150.0
 offset_bottom = 90.0
 grow_horizontal = 2
-text = ""
 horizontal_alignment = 1
 vertical_alignment = 1
-visible = false
 
 [node name="InventoryGrid" type="GridContainer" parent="ItemShopUI/BackgroundPanel"]
 layout_mode = 1

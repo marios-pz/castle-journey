@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://tn8pea20bper"]
+[gd_scene load_steps=5 format=3 uid="uid://tn8pea20bper"]
 
 [ext_resource type="Script" uid="uid://4voxonmv4ww1" path="res://scripts/inventory/slot/inventory_slot.gd" id="1_wvgqc"]
 [ext_resource type="Texture2D" uid="uid://ewyjo8frbf1e" path="res://ui/inventory/inventory_slot.png" id="2_natq7"]
+[ext_resource type="Texture2D" uid="uid://btod8483bjwr3" path="res://ui/inventory/inventory_slot_highlight.png" id="3_highlight"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l4pmv"]
 light_mode = 2
@@ -31,3 +32,8 @@ centered = false
 [node name="InventorySlot" type="Sprite2D" parent="."]
 texture = ExtResource("2_natq7")
 centered = false
+
+[node name="Highlight" type="Sprite2D" parent="."]
+texture = ExtResource("3_highlight")
+centered = false
+visible = false

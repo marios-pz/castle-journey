@@ -2,7 +2,12 @@ extends Panel
 class_name InventorySlot
 
 @onready var item_visual: Sprite2D = $CenterContainer/Panel/item_to_display
+@onready var highlight: Sprite2D = $Highlight
 var current_item: Item = null
+var is_highlighted: bool = false
+var click_count: int = 0
+var click_timer: float = 0.0
+var click_timeout: float = 0.5  # Time window for double click
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if not item_visual or not current_item:
@@ -45,3 +50,52 @@ func update(item: Item):
 
 func get_item() -> Item:
 	return current_item
+
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed and current_item:
+			handle_click()
+
+func _process(delta: float) -> void:
+	if click_timer > 0:
+		click_timer -= delta
+		if click_timer <= 0:
+			# Timeout - treat as single click
+			if click_count == 1:
+				handle_single_click()
+			click_count = 0
+
+func handle_click() -> void:
+	click_count += 1
+	click_timer = click_timeout
+	
+	if click_count == 2:
+		# Double click - buy the item
+		handle_double_click()
+		click_count = 0
+		click_timer = 0
+
+func handle_single_click() -> void:
+	# Single click - show/hide highlight
+	if not is_highlighted:
+		show_highlight()
+	else:
+		hide_highlight()
+
+func handle_double_click() -> void:
+	# Double click - buy the item
+	if current_item:
+		# Emit signal to parent to handle buying
+		buy_item_requested.emit(current_item)
+
+func show_highlight() -> void:
+	if highlight:
+		highlight.visible = true
+		is_highlighted = true
+
+func hide_highlight() -> void:
+	if highlight:
+		highlight.visible = false
+		is_highlighted = false
+
+signal buy_item_requested(item: Item)

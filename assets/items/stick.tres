@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bx3h51spfx5k8"]
 
 [ext_resource type="Script" uid="uid://ca0cnrctber4s" path="res://scripts/items/item.gd" id="1_3f5nx"]
-[ext_resource type="Texture2D" uid="uid://cnuk3spuu3i10" path="res://assets/player/inventory/items/stick.png" id="2_3f5nx"]
+[ext_resource type="Texture2D" uid="uid://cnuk3spuu3i10" path="res://assets/items/stick.png" id="2_3f5nx"]
 
 [resource]
 script = ExtResource("1_3f5nx")
 name = "Stick"
 texture = ExtResource("2_3f5nx")
+price = 0

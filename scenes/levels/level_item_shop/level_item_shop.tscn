@@ -1,9 +1,135 @@
-[gd_scene load_steps=2 format=3 uid="uid://7sstla6pkegs"]
+[gd_scene load_steps=4 format=3 uid="uid://7sstla6pkegs"]
 
 [ext_resource type="Texture2D" uid="uid://cws3foltwp8lt" path="res://scenes/levels/level_item_shop/item_shop_background.jpg" id="1_6w5i6"]
+[ext_resource type="Script" path="res://scripts/item_shop.gd" id="2_script"]
 
-[node name="LevelItemShop" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.2, 0.2, 0.2, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="LevelItemShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
 
 [node name="ItemShopBackground" type="Sprite2D" parent="."]
 texture = ExtResource("1_6w5i6")
 centered = false
+
+[node name="ItemShopUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundPanel" type="Panel" parent="ItemShopUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="Title" type="Label" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "Item Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinLabel" type="Label" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "GOLD: 200"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="NotificationLabel" type="Label" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 60.0
+offset_right = 150.0
+offset_bottom = 90.0
+grow_horizontal = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false
+
+[node name="InventoryGrid" type="GridContainer" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="BuyButton" type="Button" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -10.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Buy"
+
+[node name="LeaveButton" type="Button" parent="ItemShopUI/BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Leave"

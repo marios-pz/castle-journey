@@ -7,7 +7,7 @@
 You find yourself in a mysterious castle with no memory of how you got here.
 Your journey begins in the castle's outer grounds, and you must explore to uncover the secrets of this ancient place.
 
-![img](../ui/main_menu_background.png)
+![img](./menu_background_example.png)
 
 ## Getting Started
 
